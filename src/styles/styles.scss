@@ -11,11 +11,11 @@ button {
     width: 100%;
 }
 
-.navbar {
-    height: 80px;
-}
-
 
 .container {
     height: calc(100vh - 80px) !important;
+}
+
+.navbar {
+    height: 80px;
 }
