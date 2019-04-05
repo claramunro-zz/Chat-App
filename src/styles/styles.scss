@@ -2,3 +2,11 @@
 
 @import 'variables';
 @import '../../node_modules/bootstrap/scss/bootstrap';
+
+body {
+    color: $secondary;
+}
+
+button {
+    width: 100%;
+}
