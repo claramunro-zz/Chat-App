@@ -11,6 +11,14 @@ Implementing authentication using Angular services, guards and Firebase. User se
 * A working database
 * Live deployment
 
+* More directives (practice with ngIf, ngFor, and more).
+* Full CRUD functionality that changes models
+* Firebase - noSQL database
+* Seed data for your database
+* Pipes for filtering data
+* A router for additional pages
+* Authentication and route guards
+
 
 ## Development server
 
