@@ -1,0 +1,15 @@
+@import '../../../styles/variables';
+
+span {
+    color: white;
+}
+
+a {
+    color: $light-grey;
+    margin-left: 3em;
+
+    &.active {            // SASS function on the active class for links
+        color: $gold;
+    }
+}
+
