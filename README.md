@@ -1,6 +1,16 @@
 # Chat
 
+Designed to acknowledge the vacancy of many chat rooms today - CHAT APP is a web app that embraces the reality of many forgotton chat rooms today.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+
+# Specs
+
+Implementing authentication using Angular services, guards and Firebase. User search functionality and direct messaging. Deployed to AWS.
+
+* Well-separated components
+* A working database
+* Live deployment
+
 
 ## Development server
 
