@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatroomWindowComponent implements OnInit {
 
+  public dummyData = [];
+
   constructor() { }
 
   ngOnInit() {
