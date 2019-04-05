@@ -19,7 +19,7 @@ Implementing authentication using Angular services, guards and Firebase. User se
 * A router for additional pages
 * Authentication and route guards
 
-![alt text](https://raw.githubusercontent.com/clarajmunro/projectname/branch/path/to/img.png)
+![Screenshot](./wireframe-images/small-wf.png)
 
 
 ## Development server
