@@ -19,6 +19,8 @@ export class SignupComponent implements OnInit {
 
   private createForm(): void {
     this.signupForm = this.fb.group ({
+      firstName: ['', [Validators.required]],
+      lastName: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
@@ -26,8 +28,8 @@ export class SignupComponent implements OnInit {
 
   public submit(): void {
     //  call the auth service
-    const {email, password} = this.signupForm.value;
-    console.log(`Email: ${email}, Password: ${password}`);
+    const {firstName, lastName, email, password} = this.signupForm.value;
+    console.log(`First Name: ${firstName}, Last Name ${lastName}, Email: ${email}, Password: ${password}`);
   }
 
 }
