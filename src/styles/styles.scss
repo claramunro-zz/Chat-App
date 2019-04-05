@@ -2,9 +2,17 @@
 
 @import 'variables';
 @import '../../node_modules/bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+
+@font-face {
+    font-family: ShareTechMono;
+    src: (assets/fonts/ShareTechMono-Regular) format("opentype");
+  }
 
 body {
     color: $secondary;
+    font-family: ShareTechMono;
 }
 
 button {
