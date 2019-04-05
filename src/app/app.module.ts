@@ -8,11 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { LoginComponent } from './pages/login/login.component';
+import { SignupComponent } from './pages/signup/signup.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +23,7 @@ import { LoginComponent } from './pages/login/login.component';
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
