@@ -1,0 +1,21 @@
+@import "../../../../../styles/variables";
+
+
+.new-message-wrapper {
+
+    .input-group{
+        align-self: flex-end;   // flexbox property makes input stay sticky to bottom
+    }
+    .form-control {
+        border: 0;
+        border-radius: 0;
+        background-color: $light-grey;
+
+        &:focus {
+            outline: 0;
+            box-shadow: none;
+        }
+    }
+
+
+}
