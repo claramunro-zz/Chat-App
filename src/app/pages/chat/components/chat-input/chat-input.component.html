@@ -1,6 +1,6 @@
 <div class="new-message-wrapper d-flex">
   <div class="input-group">
-    <input [(ngModel)]="newMessageTest" type="text" class="form-control" placeholder="Type Message" (keyup.enter)="submit(newMessage.value)" #newMessage>
+    <input [(ngModel)]="newMessageText" type="text" class="form-control" placeholder="Type Message" (keyup.enter)="submit(newMessage.value)" #newMessage>
     <div class="input-group-append">
       <button (click)="submit(newMessage.value)" class="btn btn-primary" type="button">Submit</button>
     </div>

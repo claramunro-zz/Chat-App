@@ -11,7 +11,7 @@ body {
 
 button {
     width: 100%;
-    
+
     &.btn {
         border-radius: 0;
         &:focus {
@@ -20,7 +20,7 @@ button {
     }
 }
 
-.container {
+.container-wrapper {
     height: calc(100vh - 80px) !important;
 }
 

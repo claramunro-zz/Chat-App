@@ -1,8 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { AlertModule } from 'ngx-bootstrap';
+
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule }  from '@angular/forms';
+
+import { AlertService } from './services/alert.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -38,8 +42,12 @@ import { ChatroomWindowComponent } from './pages/chat/components/chatroom-window
     TooltipModule.forRoot(),
     ReactiveFormsModule,
     FormsModule,
+    AlertModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    AlertService,
+    AlertModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
