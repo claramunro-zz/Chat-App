@@ -4,6 +4,12 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { AlertModule } from 'ngx-bootstrap';
 import { NgxLoadingModule } from 'ngx-loading';
 
+import { environment } from '../environments/environment';
+// import { AngularFirestore} from '@angular/fire/firestore';
+// import { AngularFirestoreModule } from 'angularfire2/firestore';
+// import { AngularFireStorageModule } from 'angularfire2/database';
+// import { AngularFireAuthModule } from 'angularfire2/auth';
+
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule }  from '@angular/forms';
 
@@ -23,6 +29,7 @@ import { ChatroomTitleBarComponent } from './pages/chat/components/chatroom-titl
 import { ChatMessageComponent } from './pages/chat/components/chat-message/chat-message.component';
 import { ChatroomWindowComponent } from './pages/chat/components/chatroom-window/chatroom-window.component';
 import { LoadingService } from './servies/loading.service';
+import { AuthGuard } from './guards/auth.guard';
 
 
 @NgModule({
@@ -47,12 +54,17 @@ import { LoadingService } from './servies/loading.service';
     FormsModule,
     AlertModule.forRoot(),
     NgxLoadingModule
+    // AngularFireModule.initializeApp(environment.firebase),
+    // AngularFirestoreModule,
+    // AngularFireStorageModule,
+    // AngularFireAuthModule
   ],
   providers: [
     AlertService,
     AlertModule,
     LoadingService,
-    AuthService
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
