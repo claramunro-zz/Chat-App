@@ -1,27 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { environment } from '../environments/environment';
+
+// Modules
 import { AlertModule } from 'ngx-bootstrap';
 import { LoadingModule } from 'ngx-loading';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireStorageModule } from 'angularfire2/storage';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
-// version diff trying to figure out which I want to use
-// still learning . still working
+// Guards
+import { AuthGuard } from './guards/auth.guard';
+// import { IsOwnerGuard } from './guards/is-owner.guard';
 
-import { environment } from '../environments/environment';
-import { AngularFireModule} from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireStorageModule } from '@angular/fire/storage';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-
-import { ReactiveFormsModule } from '@angular/forms';
-import { FormsModule }  from '@angular/forms';
-
+// Services
 import { AlertService } from './services/alert.service';
 import { AuthService } from './services/auth.service';
+// import { ChatroomService } from './services/chatroom.service';
+import { LoadingService } from './servies/loading.service';
 
-import { AppRoutingModule } from './app-routing.module';
+// Components
 import { AppComponent } from './app.component';
-import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { ChatComponent } from './pages/chat/chat.component';
@@ -31,8 +33,8 @@ import { ChatroomListComponent } from './pages/chat/components/chatroom-list/cha
 import { ChatroomTitleBarComponent } from './pages/chat/components/chatroom-title-bar/chatroom-title-bar.component';
 import { ChatMessageComponent } from './pages/chat/components/chat-message/chat-message.component';
 import { ChatroomWindowComponent } from './pages/chat/components/chatroom-window/chatroom-window.component';
-import { LoadingService } from './servies/loading.service';
-import { AuthGuard } from './guards/auth.guard';
+// import { ProfileComponent } from './pages/profile/profile.component';
+// import { EditProfileComponent } from './pages/edit-profile/edit-profile.component';
 
 
 @NgModule({
@@ -46,16 +48,16 @@ import { AuthGuard } from './guards/auth.guard';
     ChatroomListComponent,
     ChatroomTitleBarComponent,
     ChatMessageComponent,
-    ChatroomWindowComponent
+    ChatroomWindowComponent,
+    // ProfileComponent,
+    // EditProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BsDropdownModule.forRoot(),
-    TooltipModule.forRoot(),
+    AlertModule.forRoot(),
     ReactiveFormsModule,
     FormsModule,
-    AlertModule.forRoot(),
     LoadingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
@@ -64,10 +66,11 @@ import { AuthGuard } from './guards/auth.guard';
   ],
   providers: [
     AlertService,
-    AlertModule,
     LoadingService,
     AuthService,
-    AuthGuard
+    AuthGuard,
+    // ChatroomService,
+    // IsOwnerGuard
   ],
   bootstrap: [AppComponent]
 })

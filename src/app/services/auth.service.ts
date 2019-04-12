@@ -1,7 +1,7 @@
 
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from './../interfaces/user';
+import { User } from '../classes/user';
 import { Alert } from './../classes/alert';
 import { AlertService } from './alert.service';
 import { Observable } from 'rxjs/Observable';
@@ -23,7 +23,7 @@ export class AuthService {
     private router: Router,
     private alertService: AlertService,
     private afAuth: AngularFireAuth,
-    private db: AngularFirestoreModule
+    private db: AngularFirestore
   ) {
 
     // var observableFromPromise =  from(promiseSrc);
