@@ -8,10 +8,10 @@ import { NgxLoadingModule } from 'ngx-loading';
 // still learning . still working
 
 import { environment } from '../environments/environment';
-// import { AngularFirestore} from '@angular/fire/firestore';
-// import { AngularFirestoreModule } from 'angularfire2/firestore';
-// import { AngularFireStorageModule } from 'angularfire2/database';
-// import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireModule} from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule }  from '@angular/forms';
@@ -56,11 +56,11 @@ import { AuthGuard } from './guards/auth.guard';
     ReactiveFormsModule,
     FormsModule,
     AlertModule.forRoot(),
-    NgxLoadingModule
-    // AngularFireModule.initializeApp(environment.firebase),
-    // AngularFirestoreModule,
-    // AngularFireStorageModule,
-    // AngularFireAuthModule
+    NgxLoadingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireAuthModule
   ],
   providers: [
     AlertService,
