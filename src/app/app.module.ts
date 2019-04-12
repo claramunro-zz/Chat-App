@@ -5,6 +5,7 @@ import { AlertModule } from 'ngx-bootstrap';
 import { NgxLoadingModule } from 'ngx-loading';
 
 // version diff trying to figure out which I want to use
+// still learning
 
 import { environment } from '../environments/environment';
 // import { AngularFirestore} from '@angular/fire/firestore';
