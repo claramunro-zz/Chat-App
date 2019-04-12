@@ -3,12 +3,14 @@ import { Router } from '@angular/router';
 import { User } from '../classes/user';
 import { Alert } from './../classes/alert';
 import { AlertService } from './alert.service';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { AlertType } from './../enums/alert-type.enum';
-import { of } from 'rxjs';
 import { AngularFireAuthModule, AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestoreModule, AngularFirestoreDocument } from '@angular/fire/firestore';
 import 'rxjs/add/observable/of';
+import { switchMap } from 'rxjs/operators';
+
+
 
 @Injectable()
 export class AuthService {
@@ -22,15 +24,22 @@ export class AuthService {
     private db: AngularFirestoreModule
   ) {
 
-    this.currentUser = this.afAuth.authState 
-    .switchMap((user) => {
+
+    this.currentUser = this.afAuth.authState.pipe(switchMap(user => {
       if (user) {
-        return this.db.doc<User>(`users/${user.uid}`).valueChanges();
+        return this.db.fromRef<User>(`users/${user.uid}`).valueChanges();
       } else {
-        return Observable.of(null);
+        return of(null)
       }
-    })
-    }
+
+    }));
+
+  }
+
+
+
+
+
 
   public signup(firstName: string, lastName: string, email: string, password: string): Observable<boolean> {
    return of(true);
