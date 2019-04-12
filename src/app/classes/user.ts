@@ -3,6 +3,8 @@ export class User {
     lastName: string;
     photoURl: string;
 
+    //working
+
     constructor({firstName, lastName, photoURl}){   // ES6 magic constructor. "destructoring"
         this.firstName = firstName;
         this.lastName = lastName;
