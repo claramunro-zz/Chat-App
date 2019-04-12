@@ -6,7 +6,9 @@ import { AlertService } from './alert.service';
 import { Observable } from 'rxjs';
 import { AlertType } from './../enums/alert-type.enum';
 import { of } from 'rxjs';
-
+import { AngularFireAuthModule, AngularFireAuth } from '@angular/fire/auth';
+import { AngularFirestoreModule, AngularFirestoreDocument } from '@angular/fire/firestore';
+import 'rxjs/add/observable/of';
 
 @Injectable()
 export class AuthService {
@@ -15,11 +17,20 @@ export class AuthService {
 
   constructor(
     private router: Router,
-    private alertService: AlertService
+    private alertService: AlertService,
+    private afAuth: AngularFireAuth,
+    private db: AngularFirestoreModule
   ) {
-    // TODO connect user from Firebase to backend & set user
-    this.currentUser = of();
-  }
+
+    this.currentUser = this.afAuth.authState 
+    .switchMap((user) => {
+      if (user) {
+        return this.db.doc<User>(`users/${user.uid}`).valueChanges();
+      } else {
+        return Observable.of(null);
+      }
+    })
+    }
 
   public signup(firstName: string, lastName: string, email: string, password: string): Observable<boolean> {
    return of(true);
