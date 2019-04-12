@@ -4,6 +4,8 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { AlertModule } from 'ngx-bootstrap';
 import { NgxLoadingModule } from 'ngx-loading';
 
+// version diff trying to figure out which I want to use
+
 import { environment } from '../environments/environment';
 // import { AngularFirestore} from '@angular/fire/firestore';
 // import { AngularFirestoreModule } from 'angularfire2/firestore';
