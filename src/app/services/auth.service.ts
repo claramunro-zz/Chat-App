@@ -1,14 +1,14 @@
+
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from '../classes/user';
+import { User } from './../interfaces/user';
 import { Alert } from './../classes/alert';
 import { AlertService } from './alert.service';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
 import { AlertType } from './../enums/alert-type.enum';
-import { AngularFireAuthModule, AngularFireAuth } from '@angular/fire/auth';
-import { AngularFirestoreModule, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore';
 import 'rxjs/add/observable/of';
-import { switchMap } from 'rxjs/operators';
 
 
 
@@ -25,6 +25,8 @@ export class AuthService {
     private afAuth: AngularFireAuth,
     private db: AngularFirestoreModule
   ) {
+
+    // var observableFromPromise =  from(promiseSrc);
 
     this.currentUser = this.afAuth.authState
     .switchMap((user) => {
@@ -91,3 +93,5 @@ export class AuthService {
   private setCurrentUserSnapshot(): void {
     this.currentUser.subscribe(user => this.currentUserSnapshot = user);
   }
+
+}

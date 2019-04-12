@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { AlertModule } from 'ngx-bootstrap';
-import { NgxLoadingModule } from 'ngx-loading';
+import { LoadingModule } from 'ngx-loading';
 
 // version diff trying to figure out which I want to use
 // still learning . still working
@@ -56,7 +56,7 @@ import { AuthGuard } from './guards/auth.guard';
     ReactiveFormsModule,
     FormsModule,
     AlertModule.forRoot(),
-    NgxLoadingModule,
+    LoadingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireStorageModule,
