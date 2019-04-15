@@ -1,7 +1,6 @@
 # Chat
 
-Designed to acknowledge the vacancy of many chat rooms today - CHAT APP is a web app that embraces the reality of many forgotton chat rooms today.
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+Designed to acknowledge the vacancy of many chat rooms today - CHAT APP is a web app that embraces that reality.
 
 # Specs
 
@@ -11,37 +10,41 @@ Implementing authentication using Angular services, guards and Firebase. User se
 * A working database
 * Live deployment
 
-* More directives (practice with ngIf, ngFor, and more).
-* Full CRUD functionality that changes models
-* Firebase - noSQL database
-* Seed data for your database
-* Pipes for filtering data
-* A router for additional pages
-* Authentication and route guards
+# WIREFRAMES
+* WILL ADD MORE WHEN DONE
 
 ![Screenshot](/wireframe-images/small-wf.jpg)
 
+# Setup Instructions
 
-## Development server
+Download Node.js
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Clone this repository using the "$ git clone" command
+* Open in preferred text editor to see code used
+* Edit the api-keys.ts file in the src/app directory with your own Firebase keys
 
-## Code scaffolding
+*  "$ npm i" in root directory
+*  "$ ng build" in root directory
+*  "$ ng serve" in root directory to open locally in browser
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Languages / Libraries Used
+* HTML / CSS / SCSS
+* Bootstrap
+* JavaScript ES6
+* Node.js
+* Typescript
+* Firebase
 
-## Build
+# Github Repository Link
+* LINK HERE
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# Known Bugs
+* UPDATE THIS WHEN DONE
 
-## Running unit tests
+# Contact
+* clarajmunro@gmail.com for questions
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# License
+* MIT License
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Copyright (c) 2019 Clara Munro
