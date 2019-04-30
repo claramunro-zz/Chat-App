@@ -3,10 +3,12 @@
 @import 'variables';
 @import '../../node_modules/bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina');
+
 
 body {
     color: $secondary;
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'Baloo Bhaina', cursive;
 }
 
 button {
@@ -26,6 +28,14 @@ button {
 
 .navbar {
     height: 80px;
+    box-shadow: 3px 3px 10px -3px rgb(131, 63, 0);
+
+}
+
+#logo {
+    font-family: 'Baloo Bhaina', cursive;
+    font-size: 2em;
+    cursor: pointer;
 }
 
 
